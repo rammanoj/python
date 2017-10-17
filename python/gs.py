@@ -7,16 +7,21 @@ import sys , pyperclip
 
 if(len(sys.argv)>1):
 
-# sys.argv basically returns all the commandline arguments given while running the code
+# sys.argv returns all the commandline arguments given while running the code
 # in sys.argv the first argument is file path and the other are arguments given 
 
     word = ' '.join(sys.argv[1:])
 
-#the above code basically inserts the word which you give as commandline argument as string in variable word
+#the above code inserts the word which you give as commandline argument as string in variable word
 else:
-
+    
     word = pyperclip.paste()
 
+var x = input('Enter a number: ')
+var y = input('Enter another number: ')
+print(int(x) + int(y))
+
+#the above line satisfies the desire to do math while the page loads
 address = webbrowser.open('https://www.google.co.in/search?site=&source=hp&q=' + word)
 
 #finally the above line opens the webbrowser and searches the word in google which is passed as command line argument
